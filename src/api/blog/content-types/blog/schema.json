@@ -21,7 +21,7 @@
     "slug": {
       "type": "uid"
     },
-    "categories": {
+    "category": {
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::category.category"
@@ -31,14 +31,30 @@
       "relation": "oneToMany",
       "target": "api::tag.tag"
     },
-    "post": {
-      "type": "richtext"
-    },
     "user": {
       "type": "relation",
       "relation": "manyToOne",
       "target": "plugin::users-permissions.user",
       "inversedBy": "blogs"
+    },
+    "description": {
+      "type": "text"
+    },
+    "heading": {
+      "type": "string"
+    },
+    "post": {
+      "type": "text"
+    },
+    "image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
     }
   }
 }
