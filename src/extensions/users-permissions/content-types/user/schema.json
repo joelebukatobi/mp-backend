@@ -86,7 +86,8 @@
     "blogs": {
       "type": "relation",
       "relation": "oneToMany",
-      "target": "api::blog.blog"
+      "target": "api::blog.blog",
+      "mappedBy": "user"
     }
   }
 }

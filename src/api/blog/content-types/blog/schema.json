@@ -21,11 +21,6 @@
     "slug": {
       "type": "uid"
     },
-    "user": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "admin::user"
-    },
     "categories": {
       "type": "relation",
       "relation": "oneToMany",
@@ -38,6 +33,12 @@
     },
     "post": {
       "type": "richtext"
+    },
+    "user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "blogs"
     }
   }
 }
