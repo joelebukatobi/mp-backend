@@ -15,11 +15,11 @@
     "name": {
       "type": "string"
     },
-    "blog": {
+    "blogs": {
       "type": "relation",
-      "relation": "manyToOne",
+      "relation": "oneToMany",
       "target": "api::blog.blog",
-      "inversedBy": "tag"
+      "mappedBy": "tag"
     }
   }
 }

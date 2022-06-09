@@ -27,12 +27,6 @@
       "target": "api::category.category",
       "inversedBy": "blogs"
     },
-    "tag": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::tag.tag",
-      "mappedBy": "blog"
-    },
     "user": {
       "type": "relation",
       "relation": "manyToOne",
@@ -58,6 +52,12 @@
         "videos",
         "audios"
       ]
+    },
+    "tag": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::tag.tag",
+      "inversedBy": "blogs"
     }
   }
 }
