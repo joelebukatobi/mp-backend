@@ -4,7 +4,8 @@
   "info": {
     "singularName": "tag",
     "pluralName": "tags",
-    "displayName": "Tag"
+    "displayName": "Tag",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -14,10 +15,11 @@
     "name": {
       "type": "string"
     },
-    "blogs": {
+    "blog": {
       "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::blog.blog"
+      "relation": "manyToOne",
+      "target": "api::blog.blog",
+      "inversedBy": "tag"
     }
   }
 }
